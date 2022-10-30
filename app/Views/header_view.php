@@ -12,8 +12,11 @@
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-info">
         <div class="container">
-            <a class="navbar-brand" href="<?= base_url();?>">Data Barang Toko Codekop</a>
+            <a class="navbar-brand" href="<?= base_url();?>">Data Buku</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation"></button>
+                <a href="<?= base_url('Login/logout/');?>" 
+                                    class="btn btn-danger">
+                                    Logout</a>
         </div>
     </nav>

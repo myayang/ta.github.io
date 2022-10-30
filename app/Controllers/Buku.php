@@ -11,7 +11,7 @@ class Buku extends Controller
         $data['title']     = 'Data Buku';
         $data['getBuku'] = $model->getBuku();
         echo view('header_view', $data);
-        echo view('Buku_view', $data);
+        echo view('Buku/Buku_view', $data);
         echo view('footer_view', $data);
     }
 
@@ -19,7 +19,7 @@ class Buku extends Controller
     {
         $data['title']     = 'Tambah Data Buku';
         echo view('header_view', $data);
-        echo view('tambah_view', $data);
+        echo view('Buku/tambah_view', $data);
         echo view('footer_view', $data);
     }
 
@@ -33,11 +33,6 @@ class Buku extends Controller
             'penulis'  => $this->request->getPost('penulis'),
         );
         $model->saveBuku($data);
-        echo '<script>
-                alert("Sukses Tambah Data Buku");
-                window.location="'.base_url('Buku').'"
-            </script>';
-
     }
 
     public function edit($id)
@@ -50,15 +45,8 @@ class Buku extends Controller
             $data['title']  = 'Edit '.$getBuku->judul_buku;
 
             echo view('header_view', $data);
-            echo view('edit_view', $data);
+            echo view('Buku/edit_view', $data);
             echo view('footer_view', $data);
-
-        }else{
-
-            echo '<script>
-                    alert("ID Buku '.$id.' Tidak ditemukan");
-                    window.location="'.base_url('Buku').'"
-                </script>';
         }
     }
 
@@ -86,11 +74,6 @@ class Buku extends Controller
         if(isset($getBuku))
         {
             $model->hapusBuku($id);
-            echo '<script>
-                    alert("Hapus Data Buku Sukses");
-                    window.location="'.base_url('buku').'"
-                </script>';
-
         }else{
 
             echo '<script>
@@ -99,14 +82,4 @@ class Buku extends Controller
                 </script>';
         }
     }
-
-    public function upload()
-    {
-        $data['title']     = 'Upload Data Buku';
-        echo view('header_view', $data);
-        echo view('upload_view', $data);
-        echo view('footer_view', $data);
-    }
-
-
 }
