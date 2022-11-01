@@ -2,7 +2,7 @@
     <a href="<?= base_url('buku');?>" class="btn btn-secondary mb-2">Kembali</a>
     <div class="card">
         <div class="card-header bg-info text-white">
-            <h4 class="card-title">Tambah Data Barang</h4>
+            <h4 class="card-title">Tambah Data Buku</h4>
         </div>
         <div class="card-body">
             <form method="post" action="<?= base_url('buku/add');?>">

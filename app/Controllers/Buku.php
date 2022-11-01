@@ -10,17 +10,13 @@ class Buku extends Controller
         $model = new Buku_model;
         $data['title']     = 'Data Buku';
         $data['getBuku'] = $model->getBuku();
-        echo view('header_view', $data);
         echo view('Buku/Buku_view', $data);
-        echo view('footer_view', $data);
     }
 
     public function tambah()
     {
         $data['title']     = 'Tambah Data Buku';
-        echo view('header_view', $data);
         echo view('Buku/tambah_view', $data);
-        echo view('footer_view', $data);
     }
 
     public function add()

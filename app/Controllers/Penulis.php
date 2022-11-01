@@ -10,17 +10,13 @@ class Penulis extends Controller
         $model = new Penulis_model;
         $data['title']     = 'Data Penulis';
         $data['getPenulis'] = $model->getPenulis();
-        echo view('header_view', $data);
         echo view('Penulis/Penulis_view', $data);
-        echo view('footer_view', $data);
     }
 
     public function tambah()
     {
         $data['title']     = 'Tambah Data Penulis';
-        echo view('header_view', $data);
         echo view('Penulis/tambah_view', $data);
-        echo view('footer_view', $data);
     }
 
     public function add()

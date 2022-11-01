@@ -1,0 +1,10 @@
+CRITICAL - 2022-10-31 21:33:42 --> Invalid file: header_view.php
+#0 C:\xampp\htdocs\BUKUON\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header_view.php')
+#1 C:\xampp\htdocs\BUKUON\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('header_view', Array, true)
+#2 C:\xampp\htdocs\BUKUON\app\Controllers\Buku.php(13): view('header_view', Array)
+#3 C:\xampp\htdocs\BUKUON\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Buku->index()
+#4 C:\xampp\htdocs\BUKUON\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#5 C:\xampp\htdocs\BUKUON\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\BUKUON\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\BUKUON\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
